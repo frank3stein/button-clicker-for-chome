@@ -5,7 +5,7 @@
 //     const refreshButtons = Array.prototype.filter.call(buttons, button => button.innerText === 'REFRESH');
 //     refreshButtons.forEach(refreshButton => refreshButton.click())
 // }, 3000);
-
+let i = 0;
 
 const minuteToMilliSeconds = (minute) => Math.floor(minute * 60_000);
 const minuteArrayToMilliSecondsArray = minutesArray => minutesArray.map(minuteToMilliSeconds)
@@ -32,6 +32,8 @@ const findButtonAndClick = (buttonText) => {
 
 // recursively call setTimeout with different time intervals and click the button
 const loopTimeOut = (buttonText, finalArrayInMilliSeconds) => setTimeout(() => {
+    // checking if there is a memory leak. TODO: Remove after testing
+    console.trace(`Stack Trace ${++i}`)
     findButtonAndClick(buttonText);
     loopTimeOut(buttonText, finalArrayInMilliSeconds)
 }, randomPick(finalArrayInMilliSeconds))

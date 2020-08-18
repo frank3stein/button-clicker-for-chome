@@ -1,6 +1,6 @@
 {
     "name":"Udacity Auto Queue for Reviews",
-    "version":"1.2",
+    "version":"1.1.2",
     "author":"Emil Martinov",
     "description":"This extension allows you to queue when the page is refreshed.",
     "content_scripts":[
