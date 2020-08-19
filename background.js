@@ -36,6 +36,7 @@ const loopTimeOut = (buttonText, finalArrayInMilliSeconds) => setTimeout(() => {
     console.trace(`Stack Trace ${++i}`)
     findButtonAndClick(buttonText);
     loopTimeOut(buttonText, finalArrayInMilliSeconds)
+    return;
 }, randomPick(finalArrayInMilliSeconds))
 
 // let's kick start our process

@@ -3,6 +3,8 @@
     "version":"1.1.2",
     "author":"Emil Martinov",
     "description":"This extension allows you to queue when the page is refreshed.",
+    "icons":{ 
+        "48": "udacity.png" },
     "content_scripts":[
         {
         "matches":["https://mentor-dashboard.udacity.com/queue/overview"],
