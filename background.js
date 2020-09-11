@@ -24,7 +24,7 @@ console.log(finalArrayInMilliSeconds.map(x => x / 60_000))
 const findButtonAndClick = (buttonText) => {
     const buttons = document.querySelectorAll('button');
     console.log("Running")
-    const refreshButtons = Array.prototype.filter.call(buttons, button => button.innerText === buttonText);
+    const refreshButtons = Array.prototype.filter.call(buttons, button => button.innerText.toLowerCase() === buttonText.toLowerCase());
     refreshButtons.forEach(refreshButton => refreshButton.click())
     console.log(`${buttonText} buttons are clicked.`)
 }
